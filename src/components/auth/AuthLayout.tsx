@@ -34,5 +34,3 @@ export function AuthLayout({ children, title, linkText, linkHref }: AuthLayoutPr
         </div>
     )
 }
-
-export default AuthLayout

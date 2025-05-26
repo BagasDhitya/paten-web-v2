@@ -19,7 +19,7 @@ type AuthInput = {
     role?: string
 }
 
-export default function AuthForm({ type }: AuthFormProps) {
+export function AuthForm({ type }: AuthFormProps) {
     const { login, register } = useAuth()
     const schema = type === 'login' ? loginSchema : registerSchema
     const initialValues = type === 'login' ? { email: '', password: '' } : { name: '', email: '', password: '', role: 'vendor' }

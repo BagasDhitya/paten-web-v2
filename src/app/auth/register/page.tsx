@@ -7,11 +7,11 @@ function Login() {
     return (
         <>
             <AuthLayout
-                title="Masuk ke PATEN"
-                linkText="Belum punya akun? Daftar disini"
-                linkHref="/auth/register"
+                title="Daftar ke PATEN"
+                linkText="Sudah punya akun? Silakan login disini"
+                linkHref="/auth/login"
             >
-                <AuthForm type="login" />
+                <AuthForm type="register" />
             </AuthLayout>
             <ToastContainer position="bottom-right" />
         </>

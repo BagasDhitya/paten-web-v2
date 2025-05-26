@@ -10,10 +10,11 @@ export function useAuth() {
     async function login(email: string, password: string) {
         try {
             const { data } = await api.post('api/auth/login', { email, password })
-            localStorage.setItem('token', data?.token)
+            localStorage.setItem('token', data?.data?.token)
             toast.success("Login berhasil")
             router.push("/")
         } catch (error) {
+            console.log('error : ', error)
             if (error && typeof error === 'object' && 'response' in error) {
                 const err = error as { response?: { data?: { message?: 'Login gagal' } } }
                 toast.error(err.response?.data?.message)
